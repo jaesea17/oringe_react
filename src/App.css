@@ -1,0 +1,42 @@
+*, *:before, *:after {
+    margin: 0px;
+    padding: 0px;
+    box-sizing:border-box
+}
+
+html {
+    background-image: url(./images/sports.jpg);
+    background-repeat: no-repeat center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; 
+    color: rgb(21, 218, 135);   
+}
+
+.header_div {
+    padding: 5px;
+    text-align: center;
+}
+
+.admin_div {
+    margin: 5px 0px 5px 0px;
+    padding: 5px;
+    text-align: right;
+}
+
+.pioneer {
+    margin: 5px;
+}
+
+.container_div {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+input, select, .schedule {
+    padding: 10px;
+}
+
