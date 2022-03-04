@@ -63,8 +63,8 @@ const Signin = () => {
                     <input type="submit" value="Submit"/>
                 </form>
                 
-                <p><Link to=""> Forgot Password? </Link></p>
-                <p>not registered ?<Link to="signup"> Signup </Link></p> 
+                <p><Link to="" style={{color: 'red'}}> Forgot Password? </Link></p>
+                <p>not registered ?<Link to="signup" style={{color: 'red'}}> Signup </Link></p> 
 
             </div>
         </>
