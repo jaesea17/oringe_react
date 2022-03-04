@@ -35,47 +35,47 @@ const Signup = () => {
             <div className="header_div">
                 <h3>all admins must have a pre-issued admin id!</h3>
                 <form onSubmit={handleSubmit}>
-                    <label>full Name:
-                        <input
-                        data-testid="firstName-input"
-                        type="text"
-                        name="fullName"
-                        value={inputs.fullName || ""}                    
-                        onChange={handleChange}
-                        />
-                    </label><br></br><br></br>
+                    <p>full Name</p>
+                    <input
+                    data-testid="firstName-input"
+                    type="text"
+                    name="fullName"
+                    value={inputs.fullName || ""}                    
+                    onChange={handleChange}
+                    />
+                    <br></br><br></br>
             
-                    <label>Email:
-                        <input
-                        type="email" 
-                        name="email"
-                        value={inputs.email || ""}
-                        onChange={handleChange}
-                        />
-                    </label><br></br><br></br>
+                    <p>Email</p>
+                    <input
+                    type="email" 
+                    name="email"
+                    value={inputs.email || ""}
+                    onChange={handleChange}
+                    />
+                    <br></br><br></br>
 
-                    <label>Admin id:
-                        <input
-                        type="text" 
-                        name="adminId"
-                        value={inputs.adminId || ""}
-                        onChange={handleChange}
-                        />
-                    </label><br></br><br></br>
+                    <p>Admin id</p>
+                    <input
+                    type="text" 
+                    name="adminId"
+                    value={inputs.adminId || ""}
+                    onChange={handleChange}
+                    />
+                    <br></br><br></br>
                     
-                    <label>Password:
-                        <input
-                        type="password" 
-                        name="password"
-                        value={inputs.password || ""}
-                        onChange={handleChange}
-                        />
-                    </label>
+                    <p>Password</p>
+                    <input
+                    type="password" 
+                    name="password"
+                    value={inputs.password || ""}
+                    onChange={handleChange}
+                    />
+                
                     <li style={{listStyle: "none"}}>(Password must be atleast 6 characters long)</li>
 
                     <input type="submit" value="signup"/>
                 </form>
-                <p>Already an Admin ?<Link to="signin">signin</Link></p>
+                <p>Already an Admin ?<Link to="signin" style={{color: 'red'}}>signin</Link></p>
             </div>
         </>
     )

@@ -3,7 +3,6 @@ import { Route, Switch } from "react-router-dom";
 import ProtectedRoute from "./components/routes/ProtectedRoute";
 import { auth } from "./components/util/auth";
 import Signin from "./pages/admin/Signin";
-import { Signout } from "./pages/admin/Signout";
 import Signup from "./pages/admin/Signup";
 import AdminDashboard from "./pages/dashboards/AdminDashboard";
 import UserDashboard from "./pages/dashboards/UserDashboard";
@@ -34,14 +33,6 @@ const App = () => {
                <div>
                   <UserContext.Provider value={setIsAuth}>
                     <Signin />
-                  </UserContext.Provider>
-               </div>
-           </Route>
-
-           <Route exact path="/admin/signout">
-               <div>
-                  <UserContext.Provider value={setIsAuth}>
-                    <Signout />
                   </UserContext.Provider>
                </div>
            </Route>
