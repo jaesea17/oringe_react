@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react"
+import { useHistory } from "react-router";
 import Participant from "../../components/Participant";
 import { baseUrl } from "../../components/util/url";
 
@@ -13,6 +14,8 @@ const AdminDashboard = () => {
         date: "",
         time: ""
     })
+
+    const history = useHistory();
 
 
     //EFFECTS
@@ -51,11 +54,18 @@ const AdminDashboard = () => {
 
     return(
         <div>
-            <h3>Registered Schools</h3>
+            <div style={{textAlign: 'right', margin: '17px'}}>
+                <button style={{padding: '5px'}} onClick={() => {
+                    localStorage.removeItem("auth_token");
+                    history.push("/admin/signin")
+                    // history.push('/admin/signout');
+                }}>signout</button>
+            </div>
+            <h3 style={{color: 'blue', marginLeft: '17px'}}>Registered Schools</h3>
             <div className="container_div pioneer">
                 {participants.map((participant) => {
                     return(
-                        <div key={participant._id}>
+                        <div key={participant._id} style={{margin: '5px'}}>
                             <Participant participant={participant}/>
                         </div>
                     )
@@ -64,47 +74,46 @@ const AdminDashboard = () => {
             </div>
             
             <div className="schedule pioneer">
-                <h3>Schedule match</h3>
-                <form onSubmit={handleSubmit}>
-                    <label>
-                        Home:
-                        <input type="text"
-                        name="home"
-                        value={matchDetails.home}
-                        onChange={handleChange}
-                        required
-                        />
-                    </label><br></br><br></br>
-                    
-                    <label>
-                        Away:
-                        <input type="text"
-                        name="away"
-                        value={matchDetails.away}
-                        onChange={handleChange}
-                        required
+                <h3 style={{color: 'blue', marginBottom: '7px'}}>Schedule match</h3>
+                <form onSubmit={handleSubmit}>  
+                    <p>Home</p>
+                    <input type="text"
+                    name="home"
+                    value={matchDetails.home}
+                    onChange={handleChange}
+                    required
                     />
-                    </label><br></br><br></br>
+                    <br></br><br></br>
                     
-                    <label>
-                        Date:
-                        <input type="date"
-                        name="date"
-                        value={matchDetails.date}
-                        onChange={handleChange}
-                        required
-                        />
-                    </label><br></br><br></br>
                     
-                    <label>
-                        Time:
-                        <input type="time"
-                        name="time"
-                        value={matchDetails.time}
-                        onChange={handleChange}
-                        required
-                        />
-                    </label><br></br><br></br>
+                    <p>Away</p>
+                    <input type="text"
+                    name="away"
+                    value={matchDetails.away}
+                    onChange={handleChange}
+                    required
+                    />
+                    <br></br><br></br>
+                    
+                    
+                    <p>Date</p>
+                    <input type="date"
+                    name="date"
+                    value={matchDetails.date}
+                    onChange={handleChange}
+                    required
+                    />
+                    <br></br><br></br>
+                    
+                    
+                    <p>Time</p>
+                    <input type="time"
+                    name="time"
+                    value={matchDetails.time}
+                    onChange={handleChange}
+                    required
+                    />
+                    <br></br><br></br>
 
                     <input type="submit" value="Schedule"/>
                 </form>

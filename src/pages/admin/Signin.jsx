@@ -7,8 +7,8 @@ import { UserContext } from "../../useContext";
 
 const Signin = () => {
 
-    let [isAuth, setIsAuth] = useContext(UserContext);
-    console.log(isAuth)
+    let setIsAuth = useContext(UserContext);
+
     const [inputs, setInputs] = useState({email: "", password: ""});
     let history = useHistory();
     
