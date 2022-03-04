@@ -3,7 +3,7 @@ import Signup from '../pages/user/Signup';
 import { BrowserRouter as Router } from 'react-router-dom';
 import '@testing-library/jest-dom/extend-expect';
 import {shallow} from 'enzyme';
-import { setupTest } from '../setupTest';
+import { setupTest } from './src/setupTest';
 
 
 setupTest();

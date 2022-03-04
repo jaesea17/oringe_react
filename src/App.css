@@ -5,13 +5,14 @@
 }
 
 html {
-    background-image: url(./images/sports.jpg);
+    /* background-image: url(./images/sports.jpg);
     background-repeat: no-repeat center fixed;
     background-size: 100% 100%; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover; 
+    background-size: cover;  */
+    background-color: black;
     color: rgb(21, 218, 135);   
 }
 
