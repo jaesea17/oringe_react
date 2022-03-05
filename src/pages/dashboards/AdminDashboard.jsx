@@ -73,7 +73,7 @@ const AdminDashboard = () => {
 
             </div>
             
-            <div className="schedule pioneer">
+            <div className="form_div">
                 <h3 style={{color: 'blue', marginBottom: '7px'}}>Schedule match</h3>
                 <form onSubmit={handleSubmit}>  
                     <p>Home</p>

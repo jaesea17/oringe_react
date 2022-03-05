@@ -27,6 +27,14 @@ html {
     text-align: right;
 }
 
+.form_div {
+    background-color: rgba(179, 179, 179, 0.842);
+    padding: 15px 130px 15px 130px;
+    border-radius: 25px;
+    display: inline-block;
+
+}
+
 .pioneer {
     margin: 5px;
 }
